@@ -3,8 +3,8 @@ import cookieParser                                from 'cookie-parser';
 import logger                                      from 'morgan';
 import cors                                        from "cors";
 import {IS_DEVELOPMENT, PUBLIC_PATH, SITE_ADDRESS} from "./setup/constant";
-import indexRouter                                 from "./routes/indexRouter";
-import userRouter                                  from "./routes/userRouter";
+import indexRouter                                 from "./router/indexRouter";
+import userRouter                                  from "./router/userRouter";
 
 
 
@@ -21,7 +21,7 @@ app.use(logger('dev'))
    .use(cookieParser())
    // load files from public
    .use(express.static(PUBLIC_PATH))
-   // Routes
+   // ---------- Routers -------------
    .use('/', indexRouter)
    .use('/users', userRouter)
 
