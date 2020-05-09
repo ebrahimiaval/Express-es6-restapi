@@ -24,6 +24,9 @@ app.use(logger('dev'))
    // ---------- Routers -------------
    .use('/', indexRouter)
    .use('/users', userRouter)
+   .use('*', function (req, res) {
+       res.status(404).send("ERROR 404: route not found!");
+   })
 
 
 
