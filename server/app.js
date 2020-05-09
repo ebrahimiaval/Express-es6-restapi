@@ -1,10 +1,10 @@
 import express                                     from 'express';
 import cookieParser                                from 'cookie-parser';
 import logger                                      from 'morgan';
-import indexRouter                                 from './routes/index';
-import usersRouter                                 from './routes/user';
 import cors                                        from "cors";
 import {IS_DEVELOPMENT, PUBLIC_PATH, SITE_ADDRESS} from "./setup/constant";
+import indexRouter                                 from "./routes/indexRouter";
+import userRouter                                  from "./routes/userRouter";
 
 
 
@@ -23,7 +23,7 @@ app.use(logger('dev'))
    .use(express.static(PUBLIC_PATH))
    // Routes
    .use('/', indexRouter)
-   .use('/users', usersRouter)
+   .use('/users', userRouter)
 
 
 
