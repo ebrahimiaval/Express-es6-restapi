@@ -1,4 +1,4 @@
 import {Router} from 'express';
-import Home     from "../controller/Index/Home";
+import home     from "../controller/index/home";
 
-export default Router().get('/home', Home);;
+export default Router().get('/home', home);;

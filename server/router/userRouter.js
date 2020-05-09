@@ -1,9 +1,9 @@
 import {Router} from 'express';
-import Signin   from "../controller/User/Signin";
-import Signup   from "../controller/User/Signup";
+import signin   from "../controller/user/signin";
+import signup   from "../controller/user/signup";
 
 
 export default Router()
-    .post('/signin', Signin)
-    .post('/signup', Signup)
+    .post('/signin', signin)
+    .post('/signup', signup)
 
